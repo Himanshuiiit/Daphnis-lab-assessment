@@ -56,7 +56,12 @@ const store = configureStore({
 });
 
 store.subscribe(() => {
-  saveState(store.getState());
+  const toSave = {
+    user: store.getState().user,
+    selectedCategory: store.getState().selectedCategory,
+    categories: store.getState().categories,
+  }
+  saveState(toSave);
 });
 
 export default store;
