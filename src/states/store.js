@@ -23,7 +23,7 @@ const saveState = (state) => {
 
 const initialState = loadState() || {
   user: null,
-  selectedCategory: null,
+  selectedCategory: 'All',
   categories: [],
 };
 
